@@ -8,8 +8,11 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh 'pip install pytest'
-                sh 'pytest'
+                sh '''
+                    pip install --user pytest
+                    export PATH=$PATH:$HOME/.local/bin
+                    pytest
+                '''
             }
         }
     }
