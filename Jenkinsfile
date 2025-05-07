@@ -17,7 +17,7 @@ pipeline {
         }
     }
     post {
-        always {
+        always {//
             echo 'Cleaning up...'
         }
         success {
