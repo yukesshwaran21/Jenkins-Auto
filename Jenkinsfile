@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.10'
+            image 'python:3.10-slim-buster'
         }
     }
 
@@ -9,8 +9,10 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh '''
-                    python -m venv venv
+                    apt-get update && apt-get install -y python3-venv
+                    python3 -m venv venv
                     . venv/bin/activate
+                    pip install --upgrade pip
                     pip install -r requirements.txt
                 '''
             }
