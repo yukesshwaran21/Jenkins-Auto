@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('Checkout') {//
             steps {
                 git branch: 'main', url: 'https://github.com/yukesshwaran21/Jenkins-Auto.git'
             }
