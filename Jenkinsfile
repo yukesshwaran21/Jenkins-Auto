@@ -18,7 +18,7 @@ pipeline {
     }
     post {
         always {//
-            echo 'Cleaning up...'//
+            echo 'Cleaning up.....'//
         }
         success {
             echo 'Tests passed successfully!'
