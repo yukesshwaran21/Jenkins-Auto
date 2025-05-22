@@ -21,7 +21,7 @@ pipeline {
             echo 'Cleaning up.....'//
         }
         success {
-            echo 'Tests passed successfully!'
+            echo 'Tests passed successfully!'//
         }
         failure {
             echo 'Tests failed. Please check logs.'
