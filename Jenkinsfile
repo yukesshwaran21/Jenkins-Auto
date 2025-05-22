@@ -24,7 +24,7 @@ pipeline {
             echo 'Tests passed successfully!'//
         }
         failure {
-            echo 'Tests failed. Please check logs.'
+            echo 'Tests failed. Please check logs.'//
         }
     }
 }
